@@ -8,3 +8,30 @@ elif (k+l) % 2 == (m+n) % 2:
     print('Поля одного цвета')
 else:
     print('Поля разных цветов')
+
+
+figure = input('Введите фигуру: ')
+if figure == "ферзь":
+    if k == m or l == n or abs(k - m) == abs(l - n):
+        print("Фигура угрожает полю (", m, ",", n, ")")
+    else:
+        print("Фигура не угрожает полю (", m, ",", n, ")")
+elif figure == "ладья":
+    if k == m or l == n:
+        print("Фигура угрожает полю (", m, ",", n, ")")
+    else:
+        print("Фигура не угрожает полю (", m, ",", n, ")")
+elif figure == "слон":
+    if abs(k - m) == abs(l - n):
+        print("Фигура угрожает полю (", m, ",", n, ")")
+    else:
+        print("Фигура не угрожает полю (", m, ",", n, ")")
+elif figure == "конь":
+    if (abs(k - m) == 2 and abs(l - n) == 1) or (abs(k - m) == 1 and abs(l - n) == 2):
+        print("Фигура угрожает полю (", m, ",", n, ")")
+    else:
+        print("Фигура не угрожает полю (", m, ",", n, ")")
+else:
+    print("Некорректная фигура")
+
+
